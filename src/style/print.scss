@@ -1,0 +1,65 @@
+@page {
+    size: A4;
+    margin: 2.5cm;
+
+    font-size: 0;
+}
+
+@media print {
+    nav {
+        display: none;
+    }
+
+    main {
+        position: relative !important;
+        margin-top: -100px !important;
+        top: 0;
+        float: none;
+
+        overflow: visible;
+
+        .page-editor {
+            display: none;
+        }
+
+        .render-container {
+            position: relative !important;
+            display: block;
+            width: 100%;
+            float: none;
+
+            overflow: visible;
+
+            .page-render {
+                position: relative !important;
+                display: block;
+                max-width: 18.5cm;
+                min-width: 100%;
+                min-height: 100%;
+                margin: 0;
+                padding: 0 !important;
+                float: none;
+
+                color: #555 !important;
+
+                border: none;
+            
+                visibility: visible;
+
+                .title {
+                    position: relative;
+                    display: block;
+                    float: none;
+
+                    color: #333;
+
+                    &:not(.sub)
+                    {
+                        margin-top: 0;
+                        page-break-before: always !important;
+                    }
+                }
+            }
+        }
+    }
+}

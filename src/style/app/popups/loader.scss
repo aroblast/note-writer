@@ -1,0 +1,26 @@
+.background {
+	position: fixed;
+	display: flex;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #fff;
+	
+	z-index: 10000;
+
+	img {
+		width: 30px;
+		height: 30px;
+		padding: 10px;
+
+		border-radius: 50px;
+	}
+
+	&.hidden {
+		display: none;
+	}
+}

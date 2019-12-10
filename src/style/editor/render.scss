@@ -1,0 +1,270 @@
+.page-render {
+    padding: 2.5cm;
+    min-height: calc(100% - 5cm);
+    min-width: calc(100% - 5cm);
+    text-align: left;
+
+    color: #555;
+    background-color: #f8f8f8;
+
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 10;
+
+    *:first-child {
+        margin-top: 0 !important;
+    }
+
+    // Generics
+    b {
+        font-weight: 500;
+    }
+
+    span.colored {
+        color: #3bf !important;
+    }
+
+
+    .title {
+        text-align: center;
+        margin: 80px 0;
+
+        font-size: 34px;
+        font-weight: 100;
+
+        &.sub {
+            text-align: center;
+            margin: -80px 0 80px 0;
+    
+            font-size: 20px;
+            font-weight: 100;
+        }
+    }
+
+
+    // Sections
+    .section {
+        margin: 50px 0 30px 0;
+
+        font-size: 24px;
+        font-weight: 500;
+
+        &.sub {
+            margin: 40px 0 20px 30px;
+    
+            font-size: 20px;
+            font-weight: 400;
+
+
+            .index {
+                width: 30px;
+                margin-right: 10px;
+            }
+
+            .name {
+                width: calc(100% - 40px);
+            }
+        }
+    
+        &.subsub {
+            margin: 40px 0 20px 60px;
+    
+            font-size: 20px;
+            font-weight: 400;
+
+
+            .index {
+                width: 20px;
+                margin-right: 10px;
+            }
+
+            .name {
+                width: calc(100% - 30px);
+            }
+        }
+
+
+        span {
+            display: inline-block;
+            padding: 0;
+
+            vertical-align: top;
+        }
+
+        .index {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .name {
+            width: calc(100% - 50px);
+        }
+
+        &+p {
+            margin-top: 30px !important;
+        }
+    }
+
+
+    // Paragraphs
+    p {
+        margin: 0;
+        text-align: justify;
+
+        color: #777;
+
+        font-size: 16px;
+        font-weight: 300;
+
+        &.paragraph {
+            margin-top: 20px;
+
+            text-indent: 70px;
+        }
+
+        &.base {
+            text-indent: 0 !important;
+        }
+
+        &.italic {
+            margin-top: 20px;
+
+            font-style: italic;
+
+            text-indent: 70px;
+        }
+
+        &.center {
+            text-align: center;
+
+            &.new {
+                margin: 40px 0;
+            }
+
+            &.important {
+                margin: 40px 0;
+                color: #3bf !important;
+
+                font-weight: 500;
+            }
+        }
+    }
+
+    // Properties
+    .property {
+        margin: 30px 0;
+        padding: 20px 40px;
+
+        font-size: 16px;
+
+        span {
+            &.name {
+                display: block;
+                margin-bottom: 20px;
+                flex: 1;
+
+                font-weight: 500;
+            }
+
+            &.value {
+                flex: 1;
+                text-align: justify;
+
+                font-weight: 200;
+            }
+        }
+
+
+        &.remark {
+
+            .name {
+                color: #aaa;
+
+                &::before {
+                    content: '\2192';
+
+                    width: 20px;
+                    padding-right: 20px;
+                    margin-left: -40px;
+        
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &.definition {
+            border-left: 2px solid #3bf;
+
+            .name {
+                color: #3bf;
+            }
+        }
+
+        &.theorem {
+            border-left: 2px solid #c33;
+
+            .name {
+                color: #c33;
+            }
+        }
+
+
+        &+p:not(.list) {
+            text-indent: 70px;
+        }
+    }
+
+    // Lists
+    .list {
+        margin: 20px 40px 5px 110px;
+        justify-content: left;
+
+        font-weight: 300;
+
+        &.dash::before {
+            content: '-';
+
+            display: inline-block;
+            width: 20px;
+            padding-right: 20px;
+            margin-left: -40px;
+        }
+
+        &.bullet::before {
+            content: '\2022';
+
+            display: inline-block;
+            width: 20px;
+            padding-right: 20px;
+            margin-left: -40px;
+
+            font-weight: 400;
+        }
+
+        &+.list {
+            margin-top: 0;
+        }
+    }
+
+    // Maths
+    .maths {
+        font-size: 16px;
+
+        &:first-of-type {
+            margin-top: 60px;
+        }
+
+        &.important {
+            padding: 20px;
+            margin: 30px;
+
+            color: #3bf;
+    
+            border: 1px solid #3bf;
+            border-radius: 10px;
+        }
+
+        &+p {
+            margin-top: 60px;
+        }
+    }
+}

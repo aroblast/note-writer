@@ -1,0 +1,125 @@
+main {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    overflow: hidden;
+
+    .editor {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        text-align: justify;
+        vertical-align: middle;
+
+        word-wrap: normal;
+
+        box-shadow: 0 0 15px #0000000a;
+
+        overflow-y: scroll;
+    }
+
+    .page-editor {
+        width: calc(100% - 70px);
+        min-height: calc(100% - 70px);
+        padding: 35px;
+
+        color: transparent;
+        caret-color: #555;
+        background-color: #fafbfc;
+
+        font-family: Inconsolata, monospace;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 19px;
+
+        border: none;
+        outline: none;
+
+        resize: none;
+        overflow: visible;
+
+        transition: background-color 500ms cubic-bezier(0.075, 0.82, 0.165, 1),
+                    color 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 100;
+
+        &.overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: left;
+
+            color: #555;
+            background-color: transparent;
+
+            pointer-events: none;
+            z-index: 101;
+
+            .line {
+                display: block;
+                min-height: 19px;
+
+                span {
+                    white-space: pre-wrap;
+                }
+
+                .tag {
+                    color: #f83;
+
+                    //Sections
+                    &.unsection, &.unsubsection, &.unsubsubsection {
+                        color: #3bf;
+                    }
+
+                    &.section,&.subsection,&.subsubsection {
+                        color: #3bf;
+                    }
+
+                    //Paragraphs
+                    &.important {
+                        color: #fe714d;
+                    }
+
+                    //Properties
+                    &.remark,&.definition,&.theorem {
+                        color: #fa0;
+                    }
+                }
+
+                .inline {
+                    &.italic {
+                        color: #777;
+    
+                        font-style: italic;
+                    }
+    
+                    &.bold {
+                        font-weight: 700;
+                    }
+    
+                    &.colored {
+                        color: #3bf;
+                    }
+    
+                    &.maths {
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+
+    .render-container {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        vertical-align: middle;
+
+        overflow: scroll;
+    }
+}

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500|Inconsolata:400,700');
+
+body {
+    padding-top: 100px;
+    margin: 0;
+    float: none;
+
+    background-color: #eaebec;
+
+    font-family: Montserrat, sans-serif !important;
+    font-size: 0 !important;
+
+    transition: background-color 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    .app {
+        &.dark {
+            nav {
+                background-color: #333;
+
+                .title {
+                    color: #fff;
+                }
+
+                .panel {
+                    button:not(.new) {
+                        path {
+                            fill: #777 !important;
+                        }
+
+                        polygon {
+                            fill: #777 !important;
+                        }
+
+                        .name {
+                            color: #777 !important;
+                        }
+
+                        &.print {
+                            path {
+                                fill: #fff !important;
+                            }
+            
+                            .name {
+                                color: #fff !important;
+                            }
+                        }
+                    }
+
+
+                    .loggedIn:not(.remove):not(.new) {
+                        path {
+                            fill: #fff !important;
+                        }
+        
+                        .name {
+                            color: #fff !important;
+                        }
+                    }
+
+                    .number {
+                        .name {
+                            color: #fff !important;
+                        }
+                    }
+
+                    .switch {
+                        .name {
+                            color: #fff !important;
+                        }
+                    }
+                }
+
+                .user {
+                    .email {
+                        color: #fff !important;
+                    }
+                }
+            }
+
+            .page-editor:not(.overlay) {
+                caret-color: #fff;
+                background-color: #2a2a2a;
+
+                border-right-color: #444 !important;
+            }
+
+            .overlay {
+                color: #aaa !important;
+            }
+
+            .page-render {
+                color: #eee;
+                background-color: #303030;
+
+                p:not(.important) {
+                    color: #ddd !important;
+                }
+            }
+
+            .popup {
+                background-color: #333;
+
+                .header {
+                    background-color: #3a3a3a;
+
+                    .texts {
+                        .question {
+                            color: #fff !important;
+                        }
+                    }
+                }
+
+                .file {
+                    background-color: #3a3a3a;
+
+                    .texts {
+                        .lastDate {
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+
+            // Loader
+            .background {
+                background-color: #333;
+            }
+        }
+    }
+}

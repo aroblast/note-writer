@@ -1,0 +1,150 @@
+.popup {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+
+    background-color: #f0f0f0;
+
+    opacity: 1;
+
+    transition: all 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1100;
+
+    .header {
+        display: flex;
+        height: 100px;
+        align-items: center;
+
+        background-color: #fff;
+
+        .close {
+            width: 20px;
+            height: 20px;
+            padding: 0 45px;
+
+            cursor: pointer;
+        }
+
+        .texts {
+            flex-grow: 1;
+
+            .title {
+                color: #3bf;
+
+                font-size: 26px;
+                font-weight: 200;
+            }
+
+            .question {
+                color: #777;
+
+                font-size: 14px;
+                font-weight: 200;
+            }
+        }
+
+        .buttons {
+            button {
+                display: flex;
+                width: 100px;
+                height: 100px;
+                padding: 0;
+                justify-content: center;
+                align-content: center;
+
+                background-color: #aaa;
+        
+                border: none;
+                outline: none;
+        
+                cursor: unset;
+                overflow: hidden;
+        
+                transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .yes.selected {
+                background-color: #3bf;
+        
+                cursor: pointer;
+            }
+        }
+    }
+
+    .content {
+        max-height: calc(100% - 101px);
+        padding: 50px;
+        text-align: center;
+
+        overflow: scroll;
+
+        .file-icon {
+            margin-bottom: 60px;
+            padding: 100px;
+            width: 100%;
+            text-align: center;
+
+            box-sizing: border-box;
+
+            svg {
+                width: 150px;
+                height: 150px;
+
+                * {
+                    fill: #aaa;
+                }
+            }
+
+            .sub {
+                margin-top: 80px;
+
+                color: #777;
+
+                font-size: 16px;
+                font-weight: 200;
+            }
+        }
+
+        label[for=file-input] {
+            display: inline-block;
+            width: 300px;
+            padding: 40px;
+            margin: 0 auto;
+            text-align: center;
+
+            color: #fff;
+            background-color: #3bf;
+
+            border: 1px solid #0af;
+            border-radius: 5px;
+
+            font-size: 30px;
+            font-weight: 200;
+
+            box-sizing: border-box;
+
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+        }
+
+        &.left {
+            text-align: left;
+        }
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
