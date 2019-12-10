@@ -20,7 +20,6 @@ class Toolbar extends React.Component {
         this.state = {
             documentName: this.props.documentName,
 
-            isUserSignedIn: false,
             isEdited: false,
 
             editTitle: false,
